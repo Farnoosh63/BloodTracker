@@ -11,6 +11,6 @@
 
 <%= form_for @level do |f| %>
   <%= f.label :number %>
-  <%= f.number_field(:number, in: 1..20) %>
+  <%= f.number_field(:number, in: 1..100) %>
   <%= f.submit  %>
 <% end %>

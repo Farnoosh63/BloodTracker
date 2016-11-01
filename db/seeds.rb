@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+levels = [
+  ['12', 'Sunday, October 30, 2016'],
+  ['34', 'Sunday, October 30, 2016'],
+  ['65', 'Sunday, October 30, 2016'],
+  ['76', 'Sunday, October 30, 2016']
+]
+
+levels.each do |number, date|
+  Level.create( number: number, date: date )
+end

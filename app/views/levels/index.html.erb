@@ -1,7 +1,7 @@
 <h1>Glucose Levels</h1>
 <h3>This is your blood glucose level app!</h3>
 
-<%= today = Time.now.strftime("%F") %>
+<h4> Today is: <%= today = Time.now.strftime("%F") %></h4>
 
 <% if Level.all.where(date: today).count < 4 %>
   <h5><%= link_to 'New Entry', new_level_path %></h5>

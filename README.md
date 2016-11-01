@@ -15,6 +15,7 @@ Things you may want to cover:
 > mysql.server start
 > mysql -u root -p
 > http://localhost:3000/levels
+> run $ rake db:seed to populate the levels database
 
 * Database initialization
 
