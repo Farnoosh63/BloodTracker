@@ -1,7 +1,7 @@
 
 class LevelsController < ApplicationController
   def index
-    @levels = Level.all
+    @levels = Level.search(params[:search])
     render :index
   end
 
@@ -17,7 +17,7 @@ class LevelsController < ApplicationController
 
  def create
    @level = Level.new(level_params)
-   @level.date= Time.now.strftime("%A, %B %d, %Y")
+   @level.date= Time.now.strftime("%Y-%m-%d")
    if @level.save
      redirect_to  levels_path
    else
