@@ -12,6 +12,8 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+> mysql.server start
+> mysql -u root -p
 
 * Database initialization
 
