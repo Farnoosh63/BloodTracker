@@ -14,7 +14,7 @@ class Level < ActiveRecord::Base
       start_date = Level.where(:date => "#{search_month_to_date}").first.date.at_beginning_of_month
       end_date = Level.where(:date => "#{search_month_to_date}").first.date
       date_range = start_date..end_date
-      Level.where(:date => start_date..end_date)
+      Level.where(:date => date_range)
     else
       all
     end
@@ -22,7 +22,9 @@ class Level < ActiveRecord::Base
 
   def self.search_monthly(search_monthly)
     if search_monthly
-      Level.where(:date => "#{search_monthly}")
+      start_date = Level.where(:date => "#{search_monthly}").first.date.at_beginning_of_month-1.month
+      end_date = Level.where(:date => "#{search_monthly}").first.date.at_beginning_of_month-1
+      Level.where(:date => start_date..end_date)
     else
       all
     end
