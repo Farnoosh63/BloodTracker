@@ -1,3 +1,4 @@
 <h1><%= @level.number %></h1>
+<h4><%= link_to 'Destroy', level_path(@level), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 <p><%= link_to "Return to home page", levels_path %></p>

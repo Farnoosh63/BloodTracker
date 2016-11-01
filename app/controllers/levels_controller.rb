@@ -25,6 +25,14 @@ class LevelsController < ApplicationController
    end
  end
 
+ def destroy
+  @level = Level.find(params[:id])
+  @level.destroy
+  respond_to do |format|
+    format.html { redirect_to levels_path, notice: 'Level number was successfully destroyed.' }
+  end
+end
+
 private
  def level_params
    params.require(:level).permit(:number)

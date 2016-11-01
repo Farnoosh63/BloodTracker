@@ -14,6 +14,7 @@ Things you may want to cover:
 * Database creation
 > mysql.server start
 > mysql -u root -p
+> http://localhost:3000/levels
 
 * Database initialization
 
