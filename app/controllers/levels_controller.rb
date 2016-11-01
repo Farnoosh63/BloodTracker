@@ -1,7 +1,9 @@
 
 class LevelsController < ApplicationController
   def index
-    @levels = Level.search(params[:search])
+    @levels1 = Level.search_daily(params[:search_daily])
+    @levels2 = Level.search_month_to_date(params[:search_month_to_date])
+    @levels3 = Level.search_monthly(params[:search_monthly])
     render :index
   end
 
