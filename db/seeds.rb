@@ -7,6 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 levels = [
+  ['22', 'Friday, October 28, 2016'],
+  ['65', 'Friday, October 28, 2016'],
+  ['77', 'Friday, October 28, 2016'],
+  ['90', 'Friday, October 28, 2016'],
+  ['55', 'Saturday, October 29, 2016'],
+  ['34', 'Saturday, October 29, 2016'],
+  ['6', 'Saturday, October 29, 2016'],
+  ['87', 'Saturday, October 29, 2016'],
   ['12', 'Sunday, October 30, 2016'],
   ['34', 'Sunday, October 30, 2016'],
   ['65', 'Sunday, October 30, 2016'],
