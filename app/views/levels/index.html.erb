@@ -1,0 +1,18 @@
+<h1>Glucose Levels</h1>
+<h3>This is your blood glucose level app!</h3>
+
+<%= today = Time.now.strftime("%F") %>
+
+<% if Level.all.where(date: today).count < 4 %>
+  <h5><%= link_to 'New Entry', new_level_path %></h5>
+  <% else %>
+  <p> You only have to enter blood level up to four times per day</p>
+<% end %>
+<table>
+<% @levels.each do |level| %>
+  <tr>
+    <td><%= link_to level.number, level_path(level) %></td>
+    <td><%= level.date.strftime("%A, %B %d, %Y")%></td>
+  </tr>
+<% end %>
+</table>
