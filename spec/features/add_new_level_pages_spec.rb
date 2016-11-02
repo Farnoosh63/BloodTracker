@@ -14,4 +14,14 @@ describe "the add a level process" do
     find('.btn').click
     expect(page).to have_content 'errors'
   end
+
+  it "no more than 4 entries per day" do
+    level1 = Level.create(:number => '70', :date => '2016-11-02')
+    level2 = Level.create(:number => '71', :date => '2016-11-02')
+    level3 = Level.create(:number => '72', :date => '2016-11-02')
+    level4 = Level.create(:number => '73', :date => '2016-11-02')
+    visit levels_path
+    expect(page).not_to have_content 'Add New Entry'
+    expect(page).to have_content 'No more entries possible'
+  end
 end
