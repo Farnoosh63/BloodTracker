@@ -45,7 +45,7 @@ More configurations:
 Open another terminal tab and start MYSQL
 
       - $mysql.server start
-      - $mysql.server start
+      - $mysql -u root -p
 
 
 ##### Database initialization
