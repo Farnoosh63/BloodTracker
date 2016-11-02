@@ -10,7 +10,7 @@
 <% end %>
 
 <%= form_for @level do |f| %>
-  <%= f.label :number %>
+  <%= f.label 'Number' %>
   <%= f.number_field(:number, in: 1..100) %>
-  <%= f.submit  %>
+  <%= f.button 'Submit', :class => 'btn btn-xs btn-success' %>
 <% end %>
